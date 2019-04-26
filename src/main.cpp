@@ -1,16 +1,18 @@
-#include <avr/io.h>
 #include <Arduino.h>
 
-void start() {
-  while(1) {
-    GPIOC_PSOR = 1<<5; // PSOR only sets the concerned bit
-		delay(2000);
-    GPIOC_PCOR = 1<<5;
-		delay(1000);
-  }
-}
+#include "bpm.h"
+#include "sequencer-controller.h"
 
 int main() {
-  pinMode(13, OUTPUT);
-  start();
+  // Wait for serial to be available
+  while(!Serial);
+
+  // Baud rate may be changed
+  Serial.begin(9600);
+  Serial.printf("Started \n");
+
+  Bpm* b = new Bpm(60);
+  SequencerController* seqController = new SequencerController(b);
+
+  seqController->start();
 }
