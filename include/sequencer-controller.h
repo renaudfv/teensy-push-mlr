@@ -1,6 +1,6 @@
 
 /*
- * bpm.h
+ * sequencer-controller.h
  *
  *  Created on: 25/04/2019
  *      Author: Renaud Vincent
@@ -15,12 +15,13 @@
 
 class SequencerController {
 	public:
-		SequencerController(Bpm);
+		SequencerController(Bpm*);
+		~SequencerController();
 
     void start();
 
 	private:
-	  Bpm beatsPerMinute;
+	  Bpm* bpm_;
 };
 
 #endif /* SEQUENCER_CONTROLLER_H_ */

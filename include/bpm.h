@@ -14,6 +14,7 @@
 class Bpm {
 	public:
 		Bpm(int);
+		~Bpm();
 
 		void SetBeatsPerMinute(const int bpm);
 	  int GetBeatsPerMinute();

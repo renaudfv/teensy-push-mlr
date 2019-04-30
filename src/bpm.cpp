@@ -4,6 +4,8 @@ Bpm::Bpm(const int bpm) {
   this->beatsPerMinute = bpm;
 }
 
+Bpm::~Bpm() {}
+
 int Bpm::GetBeatsPerMinute() {
   return this->beatsPerMinute;
 }
