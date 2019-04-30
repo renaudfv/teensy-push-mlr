@@ -1,10 +1,15 @@
-#include "teensy3/Arduino.h"
-#include "sequencer-controller.h"
 #include "bpm.h"
+#include "sequencer.h"
+#include "sequencer-controller.h"
 
-SequencerController::SequencerController(Bpm* b): bpm_(b) {}
+SequencerController::SequencerController(Sequencer* seq): sequencer_(seq) {}
+
+SequencerController::~SequencerController() {
+  delete sequencer_;
+}
 
 void SequencerController::start() {
-  int tb = bpm_->GetBeatsPerMinute();
-  Serial.printf("%d %d\n",tb, 0);
+  while(1) {
+    sequencer_->step();
+  }
 }

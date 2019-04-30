@@ -3,7 +3,7 @@ Teensy based implementation of Monome's MLR, meant to be used with Ableton Push 
 
 
 ## to-do
-- [ ] 16 step sequencer
+- [x] 16 step sequencer
 - [ ] multitrack
 - [ ] ableton push 1 (ap1) init
 - [ ] ap1 leds

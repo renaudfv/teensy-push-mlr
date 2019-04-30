@@ -15,13 +15,14 @@
 
 class SequencerController {
 	public:
-		SequencerController(Bpm*);
+		SequencerController(Sequencer*);
 		~SequencerController();
 
     void start();
 
 	private:
-	  Bpm* bpm_;
+		Sequencer* sequencer_;
+
 };
 
 #endif /* SEQUENCER_CONTROLLER_H_ */

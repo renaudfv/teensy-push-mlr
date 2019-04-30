@@ -11,18 +11,19 @@
 
 #pragma once
 
-class Bpm {
+#include "subject.h"
+
+class Bpm: public Subject {
 	public:
 		Bpm(int);
 		~Bpm();
 
-		void SetBeatsPerMinute(const int bpm);
-	  int GetBeatsPerMinute();
-	  int GetBeatLenghtMs();
+		void setBeatsPerMinute(const int bpm);
+	  int getBeatsPerMinute();
+	  int getBeatLenghtMs();
 
 	private:
-	  int beatsPerMinute;
-	  int period;
+	  int beatsPerMinute_;
 };
 
 #endif /* BPM_H_ */

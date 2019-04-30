@@ -1,19 +1,20 @@
 #include "bpm.h"
 
 Bpm::Bpm(const int bpm) {
-  this->beatsPerMinute = bpm;
+  beatsPerMinute_ = bpm;
 }
 
 Bpm::~Bpm() {}
 
-int Bpm::GetBeatsPerMinute() {
-  return this->beatsPerMinute;
+int Bpm::getBeatsPerMinute() {
+  return beatsPerMinute_;
 }
 
-int Bpm::GetBeatLenghtMs() {
-  return 60.0 / this->beatsPerMinute * 1000;
+int Bpm::getBeatLenghtMs() {
+  return 60.0 / beatsPerMinute_ * 1000;
 }
 
-void Bpm::SetBeatsPerMinute(const int bpm) {
-  this->beatsPerMinute = bpm;
+void Bpm::setBeatsPerMinute(const int bpm) {
+  beatsPerMinute_ = bpm;
+  notify();
 }
