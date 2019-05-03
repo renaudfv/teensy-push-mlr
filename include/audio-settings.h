@@ -6,25 +6,22 @@
  *      Author: Renaud Vincent
  */
 
-#ifndef TRACK_H_
-#define TRACK_H_
+#ifndef AUDIO_SETTINGS_H_
+#define AUDIO_SETTINGS_H_
 
 #pragma once
 
 #include "Subject.h"
 
-class Track: public Subject {
+class AudioSetting: public Subject {
 	public:
-		Track(char);
-		~Track();
+		AudioSetting();
+		~AudioSetting();
 
     void setVolume(float);
-    float getVolume();
-    char getFileName();
 
 	private:
     float volume_;
-    char fileName_[];
 };
 
-#endif /* TRACK_H_ */
+#endif /* AUDIO_SETTINGS_H_ */
