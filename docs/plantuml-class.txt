@@ -26,6 +26,10 @@ package Controller {
 
 class SequencerController {
 }
+class AudioController {
+}
+class PushController {
+}
 
 }
 
@@ -34,6 +38,8 @@ package Sense {
 class AudioEngine {
 }
 class Sequencer {
+}
+class Push {
 }
 
 }
@@ -53,4 +59,10 @@ AudioEngine o- AudioSettings
 AudioEngine "1" o- "4" Track
 
 SequencerController o-down- Sequencer
+
+AudioController o-down- Sequencer
+AudioController o-down- AudioEngine
+
+PushController o-down- Sequencer
+PushController o-down- Push
 @enduml
