@@ -10,7 +10,7 @@
 
 #pragma once
 
-#include "model/bpm.h"
+#include "sense/sequencer.h"
 
 class SequencerController {
 	public:

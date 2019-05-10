@@ -2,7 +2,9 @@
 #include "model/bpm.h"
 #include "model/sequence.h"
 #include "sense/sequencer.h"
+#include "sense/push.h"
 #include "controller/sequencer-controller.h"
+#include "controller/push-controller.h"
 
 int main() {
   /**** SETUP ****/
@@ -18,10 +20,15 @@ int main() {
 
   /**** SENSES ****/
   Sequencer* stepSequencer = new Sequencer(b, seq1, seq2, seq3, seq4);
+  Push* push = new Push();
 
   /**** CONTROLLERS ****/
   SequencerController* seqController = new SequencerController(stepSequencer);
+  PushController* pushController = new PushController(push);
 
   /**** EXECUTION ****/
+  pushController->start();
+  // Started at the end since the main running loop is in there
   seqController->start();
+
 }

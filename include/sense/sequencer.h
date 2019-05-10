@@ -1,6 +1,6 @@
 
 /*
- * sequencer-controller.h
+ * sequencer.h
  *
  *  Created on: 25/04/2019
  *      Author: Renaud Vincent
