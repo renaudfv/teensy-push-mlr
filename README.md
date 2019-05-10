@@ -1,6 +1,9 @@
 # teensy-push-mlr
-Teensy based implementation of Monome's MLR, meant to be used with Ableton Push 1
+Teensy based implementation of Monome's MLR, meant to be used with Ableton Push 1.
 
+## Design
+Based on the GoF Observer design pattern, it follows the same principles as the MVC architecture.
+I'd rather call it MSC (Model Sense Controller), since it does not only involve viewing things but hearing, recording, touching physical interfaces and perceiving time.
 
 ## to-do
 - [x] 16 step sequencer
