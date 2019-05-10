@@ -5,13 +5,12 @@
  *  Created on: 01/05/2019
  *      Author: Renaud Vincent
  */
-
 #ifndef AUDIO_SETTINGS_H_
 #define AUDIO_SETTINGS_H_
 
 #pragma once
 
-#include "Subject.h"
+#include "subject.h"
 
 class AudioSetting: public Subject {
 	public:

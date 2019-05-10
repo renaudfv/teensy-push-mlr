@@ -5,7 +5,6 @@
  *  Created on: 25/04/2019
  *      Author: Renaud Vincent
  */
-
 #ifndef BPM_H_
 #define BPM_H_
 

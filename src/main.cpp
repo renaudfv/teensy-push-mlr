@@ -22,7 +22,7 @@ int main() {
   SequencerController* seqController = new SequencerController(stepSequencer);
 
   /**** VIEWS ****/
-  SerialView* view = new SerialView(seq1, seq2, seq3, seq4);
+  // SerialView* view = new SerialView(seq1, seq2, seq3, seq4);
 
   /**** EXECUTION ****/
   seqController->start();

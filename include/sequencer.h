@@ -5,7 +5,6 @@
  *  Created on: 25/04/2019
  *      Author: Renaud Vincent
  */
-
 #ifndef SEQUENCER_H_
 #define SEQUENCER_H_
 

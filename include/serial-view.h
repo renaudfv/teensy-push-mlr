@@ -1,5 +1,7 @@
-#ifndef _SERIAL_VIEW_
-#define _SERIAL_VIEW_
+#ifndef SERIAL_VIEW_
+#define SERIAL_VIEW_
+
+#pragma once
 
 #include "observer.h"
 

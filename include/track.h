@@ -5,13 +5,12 @@
  *  Created on: 01/05/2019
  *      Author: Renaud Vincent
  */
-
 #ifndef TRACK_H_
 #define TRACK_H_
 
 #pragma once
 
-#include "Subject.h"
+#include "subject.h"
 
 class Track: public Subject {
 	public:

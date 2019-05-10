@@ -5,7 +5,6 @@
  *  Created on: 01/05/2019
  *      Author: Renaud Vincent
  */
-
 #ifndef AUDIO_ENGINE_H_
 #define AUDIO_ENGINE_H_
 
@@ -19,12 +18,16 @@
 #include "audio-settings.h"
 #include "track.h"
 
+class AudioSettings;
+
 class AudioEngine: public Observer {
 	public:
 		AudioEngine(AudioSettings*, Track*, Track*, Track*, Track*);
 		~AudioEngine();
 
     virtual void update();
+
+		void setVolume(float);
 
 	private:
     AudioSettings* settings_;

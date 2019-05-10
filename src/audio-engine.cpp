@@ -1,4 +1,4 @@
-##include "teensy3/Arduino.h"
+#include "teensy3/Arduino.h"
 #include "Audio.h"
 #include <Wire.h>
 #include <SPI.h>
@@ -42,15 +42,10 @@ AudioEngine::AudioEngine(
   Track* t1,
   Track* t2,
   Track* t3,
-  Track* t4,
+  Track* t4
 ): settings_(settings), track1_(t1), track2_(t2), track3_(t3), track4_(t4)
 {
-  // Register as an observer of the AudioSettings object
-  settings_->subscribe(this);
 
-  AudioConnection          patchCord1(playWav1, 0, audioOutput, 0);
-  AudioConnection          patchCord2(playWav1, 1, audioOutput, 1);
-  AudioPlaySdWav           playWav1;
 
   // Audio connections require memory to work.  For more
   // detailed information, see the MemoryAndCpuUsage example
@@ -59,21 +54,18 @@ AudioEngine::AudioEngine(
   // Comment these out if not using the audio adaptor board.
   // This may wait forever if the SDA & SCL pins lack
   // pullup resistors
-  sgtl5000_1.enable();
-  sgtl5000_1.volume(0.5);
+  sgtl5000_.enable();
+  sgtl5000_.volume(0.5);
 
   this->_setupSDCard();
 }
 
 AudioEngine::~AudioEngine() {
   delete settings_;
-  delete
-}
-
-void AudioEngine::setVolume(float vol) {
-  volume_ = vol;
-
-  notify();
+  delete track1_;
+  delete track2_;
+  delete track3_;
+  delete track4_;
 }
 
 void AudioEngine::_setupSDCard() {
@@ -89,7 +81,8 @@ void AudioEngine::_setupSDCard() {
 }
 
 void AudioEngine::_setupAudioRouting() {
-
+  // Register as an observer of the AudioSettings object
+  // settings_->subscribe(this);
 }
 
 
