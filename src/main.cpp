@@ -30,5 +30,4 @@ int main() {
   pushController->start();
   // Started at the end since the main running loop is in there
   seqController->start();
-
 }
