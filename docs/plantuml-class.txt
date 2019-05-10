@@ -1,0 +1,56 @@
+@startuml
+' Paste the content of this file in the online PlantUML tool http://www.plantuml.com/plantuml/uml/
+
+skinparam linetype ortho
+
+class Observer {
+}
+
+class Subject {
+}
+
+package Model {
+
+class AudioSettings {
+}
+class Track {
+}
+class Bpm {
+}
+class Sequence {
+}
+
+}
+
+package Controller {
+
+class SequencerController {
+}
+
+}
+
+package Sense {
+
+class AudioEngine {
+}
+class Sequencer {
+}
+
+}
+
+AudioSettings -up-> Subject
+Track -up-> Subject
+Bpm -up-> Subject
+Sequence -up-> Subject
+
+AudioEngine -up-> Observer
+Sequencer -up-> Observer
+
+Sequencer "1" o-down- "4" Sequence
+Sequencer o-down- Bpm
+
+AudioEngine o- AudioSettings
+AudioEngine "1" o- "4" Track
+
+SequencerController o-down- Sequencer
+@enduml
