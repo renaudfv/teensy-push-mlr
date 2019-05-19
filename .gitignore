@@ -39,3 +39,6 @@
 .gcc-flags.json
 
 .vscode
+
+*node_modules
+*package-lock.json
