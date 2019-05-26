@@ -29,3 +29,5 @@ void Sequencer::step() {
 
   delay(bpm_->getBeatLenghtMs());
 }
+
+void Sequencer::update() {}

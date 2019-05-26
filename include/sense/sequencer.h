@@ -10,17 +10,18 @@
 
 #pragma once
 
-#include "subject.h"
+#include "observer.h"
 
 #include "model/bpm.h"
 #include "model/sequence.h"
 
-class Sequencer: public Subject {
+class Sequencer: public Observer {
 	public:
 		Sequencer(Bpm*, Sequence*,  Sequence*,  Sequence*,  Sequence*);
 		~Sequencer();
 
 		void step();
+		virtual void update();
 
 	private:
 		Bpm* bpm_;
